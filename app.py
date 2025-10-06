@@ -175,9 +175,22 @@ def send_question():
     if not user_input:
         return
 
-    now = datetime.now().strftime("%H:%M:%S")
-    st.session_state.chat_history.append({"role":"user","content":user_input,"time":now})
+    # ----- KIỂM TRA NỘI DUNG ĐƯỢC CHỌN -----
+    if len(selected_sections) == 0:
+        now = datetime.now().strftime("%H:%M:%S")
+        st.session_state.chat_history.append({
+            "role": "assistant",
+            "content": "⚠️ Bạn chưa chọn chương/mục nào để tham chiếu. Vui lòng chọn ít nhất một mục.",
+            "time": now
+        })
+        render_chat()
+        return
+    # --------------------------------------
+
+    # Nếu đã chọn chương/mục, mới tiếp tục gọi AI
     st.session_state.chat_input_temp = ""  # reset input
+    now = datetime.now().strftime("%H:%M:%S")
+    st.session_state.chat_history.append({"role": "user", "content": user_input, "time": now})
     render_chat(extra_msg="AI đang suy nghĩ...", typing=True)
 
     # Lấy dữ liệu OCR trong vùng chọn
@@ -254,3 +267,4 @@ with col_right:
         placeholder="Nhập câu hỏi của bạn ở đây..."
     )
     st.button("Gửi ✈️", on_click=send_question)
+    
