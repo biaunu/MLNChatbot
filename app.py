@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import json
 from openai import OpenAI
@@ -253,3 +254,7 @@ with col_right:
         placeholder="Nhập câu hỏi của bạn ở đây..."
     )
     st.button("Gửi ✈️", on_click=send_question)
+
+streamlit~=1.50.0
+Markdown~=3.9
+openai~=2.1.0
