@@ -89,15 +89,11 @@ MLNChatbot/
 │   ├── ocr_pages/                # Các file văn bản OCR theo từng trang giáo trình
 │   └── metadata.json             # Thông tin chương - mục - trang
 │
-├── assets/
-│   ├── screenshots/              # Hình minh họa giao diện (vd: ảnh trong README)
-│   └── icons/                    # Icon, logo nếu có
-│
 ├── documents/
 │   ├── MLN_Textbook.pdf          # Giáo trình bản đẹp (PDF)
-│   └── Proposal_Slides_Group9.pdf # Slide proposal nhóm 9
+│   └── MLNChatbot_Proposal.pdf   # Slide proposal nhóm 9
 │
-├── .env.example                  # Mẫu file .env (không chứa key thật)
+├── .env.example                  # Nơi để API Key
 └── README.md                     # Tài liệu mô tả dự án
 ```
 
@@ -105,6 +101,8 @@ MLNChatbot/
 
 ## 👥 Thông tin nhóm
 
+***Trường Đại học FPT - Phân hiệu tại TP.HCM***
+- **Môn:** Triết học Mác-Lênin (MLN111)
 - **Nhóm:** 09  
 - **Lớp:** Half1_SE1714_MLN111  
 - **Học kỳ:** Fall 2025  
@@ -113,4 +111,4 @@ MLNChatbot/
 
 ## 💬 Liên hệ
 
-Nếu có vấn đề về ứng dụng hoặc cần hỗ trợ khởi chạy, vui lòng liên hệ qua phần *Issues* trên GitHub repo hoặc nhóm phát triển.
+Vui lòng liên hệ qua phần *Issues* trên GitHub repo
