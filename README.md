@@ -78,7 +78,7 @@ Sau đó mở trình duyệt tại địa chỉ:
 
 ---
 
-## 📂 Cấu trúc thư mục (gợi ý sắp xếp GitHub)
+## 📂 Cấu trúc thư mục
 
 ```
 MLNChatbot/
