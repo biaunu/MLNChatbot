@@ -23,24 +23,8 @@ with open("ocr_text.json", "r", encoding="utf-8") as f:
 # ===============================
 # 🔹 Cấu trúc chương - mục
 # ===============================
-chapter_structure = {
-    "Chương 1: Khái luận về Triết học và Triết học Mác - Lênin": {
-        "I. Triết học và vấn đề cơ bản của triết học": (10, 47),
-        "II. Triết học Mác - Lênin và vai trò của triết học Mác - Lênin trong đời sống xã hội": (47, 115),
-    },
-    "Chương 2: Chủ nghĩa duy vật biện chứng": {
-        "I. Vật chất và ý thức": (116, 181),
-        "II. Phép biện chứng duy vật": (181, 256),
-        "III. Lý luận nhận thức": (256, 282),
-    },
-    "Chương 3: Chủ nghĩa duy vật lịch sử": {
-        "I. Học thuyết hình thái kinh tế - xã hội": (283, 328),
-        "II. Giai cấp và dân tộc": (328, 383),
-        "III. Nhà nước và cách mạng xã hội": (383, 418),
-        "IV. Ý thức xã hội": (418, 446),
-        "V. Triết học về con người": (446, 488),
-    },
-}
+with open("data/metadata.json", "r", encoding="utf-8") as f:
+    chapter_structure = json.load(f)
 
 st.set_page_config(page_title="💬 Chatbot Triết học Mác - Lênin", layout="wide")
 
@@ -267,4 +251,5 @@ with col_right:
         placeholder="Nhập câu hỏi của bạn ở đây..."
     )
     st.button("Gửi ✈️", on_click=send_question)
+
     
