@@ -17,7 +17,7 @@ client = OpenAI(
 # ===============================
 # 🔹 Load dữ liệu OCR
 # ===============================
-with open("ocr_text.json", "r", encoding="utf-8") as f:
+with open("data/ocr_text.json", "r", encoding="utf-8") as f:
     ocr_data = json.load(f)
 
 # ===============================
@@ -253,3 +253,4 @@ with col_right:
     st.button("Gửi ✈️", on_click=send_question)
 
     
+
